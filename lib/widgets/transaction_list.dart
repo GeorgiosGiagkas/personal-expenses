@@ -15,7 +15,7 @@ class TransactionList extends StatelessWidget {
       height: 300,
       child: ListView.builder(
         itemCount: this.transactions.length,
-        itemBuilder: (ctx, index){
+        itemBuilder: (ctx, index) {
           return Card(
             child: Row(
               children: [
@@ -32,7 +32,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    '\$${transactions[index].amount}',
+                    '\$${transactions[index].amount.toStringAsFixed(2)}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
